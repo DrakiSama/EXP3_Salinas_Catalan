@@ -1,0 +1,27 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button 
+          defaultHref="/"
+          text="Atras"
+          color="primary"
+          mode="ios"></ion-back-button>
+    </ion-buttons>
+    <ion-title>Registro</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+  <ion-card class button (click)="presentAlertPrompt()">
+    Ingresa tus datos aqui!
+  </ion-card>
+    
+    <ion-button (click)="presentAlert()" expand="full" color="dark" shape="round">
+       Enviar!
+    </ion-button>
+    
+    
+
+
+
+</ion-content>
