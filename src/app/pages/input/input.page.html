@@ -1,0 +1,73 @@
+<ion-header>
+  <ion-toolbar>
+     <ion-buttons slot="start">
+       <ion-back-button 
+          defaultHref="/"
+          text="Atras"
+          color="primary"
+          mode="ios"></ion-back-button>
+     </ion-buttons>
+     <ion-title class="header">Registrate!</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+    <ion-item>
+      <ion-label>Nombre Completo*: </ion-label>
+      <ion-input type="text" required placeholder="Marco Salinas"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label>Nickname*: </ion-label>
+      <ion-input type="text" required placeholder="Juan3211_2019"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label>Telefono:  </ion-label>
+      <ion-input type="number" required></ion-input>
+    </ion-item>
+
+  
+
+    
+
+    <ion-item>
+      <ion-label>Género</ion-label>
+      <ion-select required placeholder="Selecciona Uno">
+        <ion-select-option value="f">Mujer</ion-select-option>
+        <ion-select-option value="m">Hombre</ion-select-option>
+      </ion-select>
+    </ion-item>
+
+    
+  <form #formulario="ngForm" (ngSubmit) ="onSubmit()">
+
+    <ion-list-header>
+      <ion-label class="label">Campos con * son obligatorios. </ion-label>
+      <br>
+      
+    </ion-list-header>
+  
+      <ion-item>
+        <ion-label>Email: </ion-label>
+        <ion-input type="email" placeholder="Email"
+                  name="email" [(ngModel)]= "usuario.email"
+                  pattern="^([a-zA-Z0-9_\-\.]+)@([a-zA-Z0-9_\-\.]+)\.([a-zA-Z]{2,5})$"
+                  required>
+        </ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label>Password: </ion-label>
+        <ion-input type="password" placeholder="Contraseña"
+                   name="password" [(ngModel)]= "usuario.password"
+                   required>
+        </ion-input>
+      </ion-item>
+      <ion-button [disabled] ="formulario.invalid"
+        type="submit" expand="block" routerLink="/inicio">
+      Registrar y volver a Inicio
+    </ion-button>
+  </form>
+</ion-content>

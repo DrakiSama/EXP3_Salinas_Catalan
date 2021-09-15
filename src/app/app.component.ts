@@ -22,12 +22,17 @@ export class AppComponent {
     }, 
     {
       icon: 'clipboard',
-      name: 'Registrate',
+      name: 'Registrate!',
+      redirecTo: '/input'
+    },
+    {
+      icon: 'clipboard',
+      name: 'test',
       redirecTo: '/alert'
     },
     {
       icon: 'accessibility',
-      name: 'Acerca de Nosotros',
+      name: 'test1',
       redirecTo: '/contactanos'
     },
   ];
