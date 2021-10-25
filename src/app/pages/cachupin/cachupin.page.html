@@ -1,0 +1,36 @@
+<ion-header class="ion-no-border">
+
+  <ion-toolbar color="dark">
+
+    <ion-title>Duoc News</ion-title>   
+
+  </ion-toolbar>
+
+</ion-header>
+
+<ion-content color="dark">
+  <ion-grid fixed>
+    <ion-row>
+      <ion-col size="12" size-lg="3" size-md="4" size-sm="6" size-xs="12"
+                *ngFor ="let cachupin of cachupin; let i= index">
+          <ion-card  color="dark">
+            <ion-card-header>
+              <ion-card-subtitle>
+                  <span class="text">{{i + 1 }}</span>
+                  <span class="noticia-name">{{cachupin.source.name}} </span>
+              </ion-card-subtitle>
+              <ion-card-title class="titulo-noticia">{{cachupin.title}}</ion-card-title>
+            </ion-card-header>    
+            <ion-img  *ngIf="cachupin.urlToImage"
+                      [src]="cachupin.urlToImage"></ion-img>   
+            
+            <ion-card-content>
+              <p class="noticia-description">
+                {{cachupin.description}}
+              </p>
+            </ion-card-content>          
+          </ion-card>
+      </ion-col>  
+    </ion-row>
+  </ion-grid>
+</ion-content>

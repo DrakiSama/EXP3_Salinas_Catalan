@@ -1,0 +1,63 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button 
+          defaultHref="/"
+          text="Atras"
+          color="primary"
+          mode="ios"></ion-back-button>
+    </ion-buttons>
+    <ion-title class="titulopag">
+      Ayudanos a mejorar! 
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-item>
+    <ion-label position="fixed">Nombre</ion-label>
+    <ion-input type="text" [(ngModel)]="newDato.nom" required></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label position="fixed">Edad</ion-label>
+    <ion-input type="number" [(ngModel)]="newDato.edad" required></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label position="fixed">Comentario</ion-label>
+    <ion-input type="text" [(ngModel)]="newDato.apellido" required></ion-input>
+  </ion-item>
+  
+
+  
+
+  <ion-button (click)="addDatos()" expand="full">
+    Agregar Comentario
+  </ion-button>
+
+  <ion-list #myList>
+    <ion-list-header>
+      <ion-label class="titucomentario">Comentarios Recientes!</ion-label>
+    </ion-list-header>
+
+    <ion-list >
+      <ion-item-sliding *ngFor="let dato of datos">
+        <ion-item>
+          <ion-label text-wrap> 
+            <h3>{{dato.nom}}</h3>
+            <ion-text color="secondary">
+              <p>{{dato.apellido}}</p>
+            </ion-text>
+            <p>{{dato.modified | date: 'short'}}</p>
+          </ion-label>
+        </ion-item>
+        <ion-item-options side="end">
+          <ion-item-option color="secondary" (click)="updateDatos(dato)">Actualizar</ion-item-option>
+         <ion-item-option color="danger" (click)="deleteDatos(dato)">Eliminar</ion-item-option> 
+        </ion-item-options>
+      </ion-item-sliding>
+    </ion-list>
+ 
+</ion-content>
+

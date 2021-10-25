@@ -27,6 +27,18 @@ const routes: Routes = [
     path: 'input',
     loadChildren: () => import('./pages/input/input.module').then( m => m.InputPageModule)
   },
+  {
+    path: 'cachupin',
+    loadChildren: () => import('./pages/cachupin/cachupin.module').then( m => m.CachupinPageModule)
+  },
+  {
+    path: 'task',
+    loadChildren: () => import('./pages/task/task.module').then( m => m.TaskPageModule)
+  },
+  {
+    path: 'datos',
+    loadChildren: () => import('./pages/datos/datos.module').then( m => m.DatosPageModule)
+  },
 ];
 
 @NgModule({

@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-
+import { HttpClientModule } from '@angular/common/http';
 interface Componente{
   icon: string; 
   name: string; 
@@ -31,10 +31,16 @@ export class AppComponent {
       redirecTo: '/alert'
     },
     {
-      icon: 'accessibility',
-      name: 'test1',
-      redirecTo: '/contactanos'
+      icon: 'clipboard',
+      name: 'cachupin',
+      redirecTo: '/cachupin'
     },
+    {
+      icon: 'accessibility',
+      name: 'Ayudanos a Mejorar!',
+      redirecTo: '/datos'
+    },
+    
   ];
   
 

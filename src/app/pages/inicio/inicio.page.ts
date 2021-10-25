@@ -27,6 +27,11 @@ export class InicioPage implements OnInit {
       name: 'Acerca de Nosotros',
       redirecTo: '/alert'
     },
+    {
+      icon: 'paw-outline',
+      name: 'cachupin',
+      redirecTo: '/cachupin'
+    },
   ];
 
   constructor(private menuController: MenuController) { }
