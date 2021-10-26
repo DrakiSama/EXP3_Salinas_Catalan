@@ -16,23 +16,13 @@ export class AppComponent {
 
   componentes : Componente[] = [
     {
-      icon: 'newspaper',
-      name: 'Noticias',
-      redirecTo: '/action-sheet'
-    }, 
-    {
       icon: 'clipboard',
       name: 'Registrate!',
       redirecTo: '/input'
     },
     {
-      icon: 'clipboard',
-      name: 'test',
-      redirecTo: '/alert'
-    },
-    {
-      icon: 'clipboard',
-      name: 'cachupin',
+      icon: 'newspaper',
+      name: 'Noticias',
       redirecTo: '/cachupin'
     },
     {

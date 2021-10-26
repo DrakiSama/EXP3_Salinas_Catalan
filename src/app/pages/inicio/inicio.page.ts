@@ -18,11 +18,6 @@ export class InicioPage implements OnInit {
 
   componentes : Componente[] = [
     {
-      icon: 'cafe-outline',
-      name: 'Noticias',
-      redirecTo: '/action-sheet'
-    },
-    {
       icon: 'paw-outline',
       name: 'Acerca de Nosotros',
       redirecTo: '/alert'

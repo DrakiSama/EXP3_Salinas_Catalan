@@ -1,5 +1,6 @@
 .text{
     color: var(--ion-color-primary) !important;
+    text-align: center;
 }
 
 .noticia-name{
@@ -18,4 +19,7 @@
     color: whitesmoke;
     text-align: center;
 
+}
+.contador {
+    text-align: end;
 }
