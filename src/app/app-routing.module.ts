@@ -1,19 +1,24 @@
 import { NgModule } from '@angular/core';
 import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
+import { IngresadoGuard } from './ingresado.guard';
+import { NoIngresadoGuard } from './noingresado.guard';
 
 const routes: Routes = [
   {
     path: '',
-    redirectTo: 'inicio',
+    redirectTo: 'login',
     pathMatch: 'full'
   },
+  
   {
     path: 'inicio',
-    loadChildren: () => import('./pages/inicio/inicio.module').then( m => m.InicioPageModule)
+    loadChildren: () => import('./pages/inicio/inicio.module').then( m => m.InicioPageModule),
+    canActivate: [IngresadoGuard]
   },
   {
     path: 'alert',
-    loadChildren: () => import('./pages/alert/alert.module').then( m => m.AlertPageModule)
+    loadChildren: () => import('./pages/alert/alert.module').then( m => m.AlertPageModule),
+    canActivate: []
   },
   {
     path: 'action-sheet',
@@ -29,7 +34,8 @@ const routes: Routes = [
   },
   {
     path: 'cachupin',
-    loadChildren: () => import('./pages/cachupin/cachupin.module').then( m => m.CachupinPageModule)
+    loadChildren: () => import('./pages/cachupin/cachupin.module').then( m => m.CachupinPageModule),
+    canActivate: [IngresadoGuard]
   },
   {
     path: 'task',
@@ -38,6 +44,17 @@ const routes: Routes = [
   {
     path: 'datos',
     loadChildren: () => import('./pages/datos/datos.module').then( m => m.DatosPageModule)
+  },
+  {
+    path: 'login',
+    loadChildren: () => import('./pages/login/login.module').then( m => m.LoginPageModule),
+    canActivate: [NoIngresadoGuard]
+
+  },
+  {
+    path: 'registro',
+    loadChildren: () => import('./pages/registro/registro.module').then( m => m.RegistroPageModule),
+    canActivate: [NoIngresadoGuard]
   },
 ];
 

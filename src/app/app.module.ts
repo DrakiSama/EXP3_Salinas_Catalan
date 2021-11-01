@@ -15,10 +15,13 @@ import { Drivers } from '@ionic/storage';
   entryComponents: [],
   imports: [BrowserModule, IonicModule.forRoot(), AppRoutingModule, HttpClientModule,
     IonicStorageModule.forRoot({
-      name: 'salinas',
+      name: 'test2',
       driverOrder: [Drivers.IndexedDB,Drivers.LocalStorage]
     }),],
   providers: [{ provide: RouteReuseStrategy, useClass: IonicRouteStrategy }],
   bootstrap: [AppComponent],
 })
+
 export class AppModule {}
+
+

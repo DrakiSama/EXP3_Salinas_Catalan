@@ -8,13 +8,27 @@
 
     <ion-content>
       <ion-list>
-          <ion-menu-toggle *ngFor="let c of componentes">
-          <ion-item [routerLink]="c.redirecTo"
-                  detail=true>
+          <ion-menu-toggle autohide="true" *ngFor="let c of componentes">
+          <ion-item [routerLink]="c.redirecTo" detail=true>
           <ion-icon [name]="c.icon" slot="start" color="primary"></ion-icon>
           {{ c.name }}
-        </ion-item>
-        </ion-menu-toggle>
+          </ion-item>
+
+          
+          </ion-menu-toggle >
+          <ion-item></ion-item>
+          <ion-item></ion-item>
+          <ion-item></ion-item>
+          <ion-item></ion-item>
+          <ion-item></ion-item>
+          <ion-item></ion-item>
+          <ion-item></ion-item>
+          
+          
+          <ion-item (click)="salir()" routerDirection="root" detail="true">
+            <ion-icon slot="start" [name]="'exit-outline'" color="gray"></ion-icon>
+            <ion-label>Salir</ion-label>
+            </ion-item>
       </ion-list>
     </ion-content>
   </ion-menu>

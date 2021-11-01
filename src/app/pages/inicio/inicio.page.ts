@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { MenuController } from '@ionic/angular';
+import { AlertController, MenuController, NavController } from '@ionic/angular';
 
 interface Componente{
   icon: string; 
@@ -29,7 +29,9 @@ export class InicioPage implements OnInit {
     },
   ];
 
-  constructor(private menuController: MenuController) { }
+  constructor(private menuController: MenuController,
+    public navCtrl: NavController,
+    public alertController: AlertController) { }
 
   ngOnInit() {
   }
@@ -38,4 +40,5 @@ export class InicioPage implements OnInit {
     this.menuController.open('first');
   }
 
+  
 }
