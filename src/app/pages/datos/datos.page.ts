@@ -37,17 +37,17 @@ export class DatosPage implements OnInit {
     this.newDato.id = Date.now();
     this.storageService.addDatos(this.newDato).then(dato=>{
       this.newDato = <Datos>{};
-      this.showToast('!Datos Agregados');
+      this.showToast('Comentario Agregado');
       this.loadDatos();
     });
   }
 
   //Actualizar Datos
   updateDatos(dato: Datos ){
-    dato.nom = `UPDATED: ${dato.nom}`;
+    dato.nom = `Edicion: ${dato.nom}`;
     dato.modified = Date.now();
     this.storageService.updateDatos(dato).then(item=>{
-      this.showToast('Elemento actualizado!')
+      this.showToast('Comentario Editado')
       this.myList.closeSlidingItems();
       this.loadDatos();
     });
@@ -56,7 +56,7 @@ export class DatosPage implements OnInit {
   //Para eliminar
   deleteDatos(dato: Datos){
     this.storageService.deleteDatos(dato.id).then(item=>{
-      this.showToast('Elemento eliminado');
+      this.showToast('Comentario Eliminado');
       this.myList.closeSlidingItems();
       this.loadDatos();
     });

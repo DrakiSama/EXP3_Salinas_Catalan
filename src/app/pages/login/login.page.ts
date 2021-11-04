@@ -13,12 +13,14 @@ import { AlertController, NavController } from '@ionic/angular';
   styleUrls: ['./login.page.scss'],
 })
 export class LoginPage implements OnInit {
+  
 
   formularioLogin: FormGroup;
 
   constructor(public fb: FormBuilder,
     public alertController: AlertController,
     public navCtrl: NavController) { 
+
 
     this.formularioLogin = this.fb.group({
       'nombre': new FormControl("",Validators.required),
@@ -29,6 +31,10 @@ export class LoginPage implements OnInit {
 
   ngOnInit() {
   }
+  
+
+
+
 
   async ingresar(){
     var f = this.formularioLogin.value;

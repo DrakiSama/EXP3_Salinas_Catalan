@@ -16,21 +16,16 @@
 
           
           </ion-menu-toggle >
-          <ion-item></ion-item>
-          <ion-item></ion-item>
-          <ion-item></ion-item>
-          <ion-item></ion-item>
-          <ion-item></ion-item>
-          <ion-item></ion-item>
-          <ion-item></ion-item>
           
           
-          <ion-item (click)="salir()" routerDirection="root" detail="true">
-            <ion-icon slot="start" [name]="'exit-outline'" color="gray"></ion-icon>
-            <ion-label>Salir</ion-label>
-            </ion-item>
+          
+
       </ion-list>
+      
     </ion-content>
+    <ion-item (click)="salir()" routerDirection="root">
+      <ion-button class="boton" shape="round" expand="full" size="default">     Cerrar Sesion     </ion-button>            
+    </ion-item>
   </ion-menu>
   <ion-router-outlet id="main"></ion-router-outlet>
 </ion-app>

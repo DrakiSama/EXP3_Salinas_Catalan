@@ -1,13 +1,14 @@
 <ion-header>
-  <ion-toolbar color="primary">
-    <ion-title>Login</ion-title>
+  <ion-toolbar class="dark">
+    
+    <ion-title >Bienvenido!</ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
   <ion-card>
     <ion-card-header>
-      <ion-card-title>Login</ion-card-title>
+      <ion-card-title class="titulo">Inicio de Sesion</ion-card-title>
     </ion-card-header>
     <ion-card-content>
       <form [formGroup]="formularioLogin">
@@ -21,7 +22,7 @@
         </ion-item>
       </form>
       <br>
-      <ion-button (click)="ingresar()">
+      <ion-button class="ingresar" (click)="ingresar()">
         Ingresar
       </ion-button>
     </ion-card-content>
@@ -29,9 +30,9 @@
 </ion-content>
 
 <ion-footer>
-  <ion-toolbar color="primary">
-    <ion-buttons slot="end">
-      <ion-button [routerLink]="['/registro']">Registrarse</ion-button>
-    </ion-buttons>
+  <ion-toolbar class="dark">
+    
+      <ion-button expand="round" fill="outline" [routerLink]="['/registro']">Registrarse</ion-button>
+    
   </ion-toolbar>
 </ion-footer>
